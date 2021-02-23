@@ -5,7 +5,7 @@ class VolunteersController < ApplicationController
   end
 
   def create
-    @volunteer = Volunteer.new(volunteer_params)
+    @volunteer = current_user.Volunteer.new(volunteer_params)
     if @volunteer.save
       render json: @volunteer
     else
