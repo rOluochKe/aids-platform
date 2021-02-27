@@ -1,5 +1,5 @@
 class Volunteer < ApplicationRecord
-  validates_presence_of :request_type, :description, :location, :longitude, :latitude, :status, :request_due_date
+  validates_presence_of :request_type, :description, :location, :latitude, :longitude, :status, :request_due_date
   validates :description, length: { minimum: 10, maximum: 300 }
   validate :start_datetime_cannot_be_in_the_past
 

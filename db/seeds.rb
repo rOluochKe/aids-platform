@@ -9,39 +9,47 @@
 
 volunteers = Volunteer.create([
   {
+    id: 1,
     request_type: "Need",
     description: "Technology can be used in many ways",
     location: "Nairobi",
-    longitude: 1.2921,
     latitude: 36.8219,
+    longitude: 1.2921,
     status: "Fulfilled",
-    request_due_date: "Fri, 18 Oct 2021"
+    request_due_date: "Fri, 18 Oct 2021",
+    user_id: 1
   },
   {
+    id: 2,
     request_type: "Task",
     description: "Technology can be used in many ways",
     location: "Nairobi",
-    longitude: 1.2921,
     latitude: 36.8219,
+    longitude: 1.2921,
     status: "Unfulfilled",
-    request_due_date: "Tue, 18 Sept 2021"
+    request_due_date: "Tue, 18 Sept 2021",
+    user_id: 2
   },
   {
+    id: 2,
     request_type: "Need",
     description: "Technology can be used in many ways",
     location: "Nairobi",
-    longitude: 1.2921,
     latitude: 36.8219,
+    longitude: 1.2921,
     status: "Unfulfilled",
-    request_due_date: "Mon, 23 July 2021"
+    request_due_date: "Mon, 23 July 2021",
+    user_id: 2
   },
   {
+    id: 1,
     request_type: "Task",
     description: "Technology can be used in many ways",
     location: "Nairobi",
-    longitude: 1.2921,
     latitude: 36.8219,
+    longitude: 1.2921,
     status: "Fulfilled",
-    request_due_date: "Sat, 12 Aug 2021"
+    request_due_date: "Sat, 12 Aug 2021",
+    user_id: 1
   }
 ])

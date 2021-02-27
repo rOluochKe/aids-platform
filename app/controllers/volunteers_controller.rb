@@ -1,13 +1,17 @@
 class VolunteersController < ApplicationController
+  before_action :set_volunteer, only: %i[show update destroy]
+
   def index
     @volunteers = Volunteer.order('request_due_date ASC')
     render json: @volunteers
   end
 
   def create
-    @volunteer = current_user.Volunteer.new(volunteer_params)
+    # @volunteer = current_user.Volunteer.new(volunteer_params)
+    @volunteer = current_user.volunteers.build(volunteer_params)
+
     if @volunteer.save
-      render json: @volunteer
+      render json: @volunteer, status: :created
     else
       render json: @volunteer.errors, status: :unprocessable_entity
     end
@@ -23,7 +27,7 @@ class VolunteersController < ApplicationController
   end
 
   def show
-    @volunteer = Volunteer.find(params[:id])
+    # @volunteer = Volunteer.find(params[:id])
     render json: @volunteer.as_json(except: :user_id,
                                     include: { user: { only: %i[first_name last_name
                                                                 image] } }).merge(currentUserCanEdit: @volunteer.user.email == request.headers['uid'])
@@ -39,6 +43,10 @@ class VolunteersController < ApplicationController
   end
 
   private
+
+  def set_volunteer
+    @volunteer = Volunteer.find(params[:id])
+  end
 
   def volunteer_params
     params.require(:volunteer).permit(:request_type, :description, :location, :latitude, :longitude, :status,
