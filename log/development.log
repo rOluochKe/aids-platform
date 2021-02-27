@@ -588,3 +588,102 @@ Processing by VolunteersController#index as HTML
 Completed 200 OK in 14ms (Views: 3.0ms | ActiveRecord: 3.1ms | Allocations: 3014)
 
 
+Started GET "/volunteers" for ::1 at 2021-02-23 20:47:13 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (1.3ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 3.6ms | ActiveRecord: 4.0ms | Allocations: 2659)
+
+
+Started GET "/volunteers" for ::1 at 2021-02-23 20:47:17 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.9ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.9ms | Allocations: 885)
+
+
+Started POST "/auth" for ::1 at 2021-02-23 20:47:34 +0300
+Processing by DeviseTokenAuth::RegistrationsController#create as HTML
+  Parameters: {"first_name"=>"", "last_name"=>"", "email"=>"", "password"=>"[FILTERED]"}
+[31mUnpermitted parameters: :first_name, :last_name[0m
+[31mUnpermitted parameters: :first_name, :last_name[0m
+[31mUnpermitted parameters: :first_name, :last_name[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."provider" = $2 LIMIT $3[0m  [["email", ""], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 74ms (Views: 0.4ms | ActiveRecord: 10.0ms | Allocations: 23830)
+
+
+Started POST "/auth" for ::1 at 2021-02-23 20:48:18 +0300
+Processing by DeviseTokenAuth::RegistrationsController#create as HTML
+  Parameters: {"first_name"=>"Jogn", "last_name"=>"Doe", "email"=>"john.doe@gmail.com", "password"=>"[FILTERED]"}
+[31mUnpermitted parameters: :first_name, :last_name[0m
+[31mUnpermitted parameters: :first_name, :last_name[0m
+[31mUnpermitted parameters: :first_name, :last_name[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."provider" = $2 LIMIT $3[0m  [["email", "john.doe@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["uid", "john.doe@gmail.com"], ["encrypted_password", "$2a$12$tzV6GZ7Mv9CcwVdqY21zOuN6SKxVOHxE9OSSj1bNPFMXt/3nSZHLq"], ["email", "john.doe@gmail.com"], ["created_at", "2021-02-23 17:48:18.773038"], ["updated_at", "2021-02-23 17:48:18.773038"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.9ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"Ff6GJq1M6Lta5rfcMUaIxg\\\":{\\\"token\\\":\\\"$2a$10$CirlzFLcOQb21YdZ8qtKC.E6aIqjxAMYOb5z4i3cTYalroTrcJ4A6\\\",\\\"expiry\\\":1615312098}}\""], ["updated_at", "2021-02-23 17:48:18.857133"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 431ms (Views: 0.2ms | ActiveRecord: 7.8ms | Allocations: 13852)
+
+
+Started GET "/volunteers" for ::1 at 2021-02-23 20:48:19 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.5ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 871)
+
+
+Started POST "/volunteers" for ::1 at 2021-02-23 20:50:25 +0300
+Processing by VolunteersController#create as HTML
+  Parameters: {"volunteer"=>{"request_type"=>"Need", "description"=>"testing need", "location"=>"Nairobi", "longitude"=>"1.2921", "latitude"=>"36.8219", "status"=>"Unfulfilled", "request_due_date"=>"2021-03-23 17:48:18"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "john.doe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 0.7ms | Allocations: 4260)
+
+
+  
+NoMethodError (undefined method `Volunteer' for #<User:0x0000560e1a854430>
+Did you mean?  volunteers
+               volunteers=):
+  
+app/controllers/volunteers_controller.rb:8:in `create'
+Started DELETE "/auth/sign_out" for ::1 at 2021-02-23 20:50:52 +0300
+Processing by DeviseTokenAuth::SessionsController#destroy as HTML
+  Parameters: {"access-token"=>"D94Q0GoeMWbiE9wnfgXRRQ", "client"=>"Ff6GJq1M6Lta5rfcMUaIxg", "uid"=>"john.doe@gmail.com"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "john.doe@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", nil], ["updated_at", "2021-02-23 17:50:52.525593"], ["id", 1]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 3.8ms | Allocations: 5885)
+
+
+Started GET "/volunteers" for ::1 at 2021-02-23 20:50:53 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.8ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.8ms | Allocations: 879)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3046397844150113145)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateConversations (20210227173833)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (19.6ms)[0m  [1m[35mCREATE TABLE "conversations" ("id" bigserial primary key, "sender_id" integer, "recipient_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210227173833"]]
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMessages (20210227173915)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE TABLE "messages" ("id" bigserial primary key, "body" text, "conversation_id" bigint, "user_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE  INDEX  "index_messages_on_conversation_id" ON "messages"  ("conversation_id")[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE  INDEX  "index_messages_on_user_id" ON "messages"  ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210227173915"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3046397844150113145)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
