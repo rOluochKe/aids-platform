@@ -1326,3 +1326,590 @@ Processing by VolunteersController#index as HTML
 Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 1.6ms | Allocations: 1269)
 
 
+Started GET "/volunteers" for ::1 at 2021-03-03 14:10:49 +0300
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (3.7ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 47ms (Views: 25.2ms | ActiveRecord: 13.8ms | Allocations: 8818)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 14:15:53 +0300
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (1.0ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 38ms (Views: 22.9ms | ActiveRecord: 6.8ms | Allocations: 8813)
+
+
+Started GET "/" for ::1 at 2021-03-03 14:16:04 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.5ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 1288)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-03-03 14:16:05 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/volunteers/1" for ::1 at 2021-03-03 14:16:09 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVolunteer Load (1.1ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:49:in `set_volunteer'
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 1.5ms | Allocations: 1304)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 14:18:34 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.6ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms | Allocations: 1291)
+
+
+Started GET "/volunteers/2" for ::1 at 2021-03-03 14:18:41 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVolunteer Load (1.4ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:49:in `set_volunteer'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 1.4ms | Allocations: 861)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 14:21:32 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.5ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 31ms (Views: 20.8ms | ActiveRecord: 6.8ms | Allocations: 7767)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 14:21:39 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.5ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 1269)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 14:25:39 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.6ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms | Allocations: 1289)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 14:28:11 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (7.1ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 3.8ms | ActiveRecord: 7.1ms | Allocations: 1269)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 14:28:54 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.7ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms | Allocations: 1272)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 14:41:52 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (2.7ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 2.7ms | Allocations: 1409)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 14:43:16 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (1.0ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 1.0ms | Allocations: 1269)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 14:44:58 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.5ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1269)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 14:45:05 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.5ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms | Allocations: 1269)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 14:45:46 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (1.4ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.4ms | Allocations: 1269)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 14:56:06 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (1.5ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.5ms | Allocations: 1409)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 15:06:49 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (2.8ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 2.8ms | Allocations: 1410)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 15:13:31 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (8.6ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 3.6ms | ActiveRecord: 8.6ms | Allocations: 1409)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 15:13:36 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.5ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 1269)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:02:02 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (2.1ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 44ms (Views: 25.4ms | ActiveRecord: 14.1ms | Allocations: 8779)
+
+
+Started GET "/volunteers/2" for ::1 at 2021-03-03 16:07:16 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVolunteer Load (0.4ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:49:in `set_volunteer'
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:32:in `show'
+Completed 200 OK in 232ms (Views: 0.4ms | ActiveRecord: 9.7ms | Allocations: 15765)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:07:19 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.6ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms | Allocations: 1288)
+
+
+Started GET "/volunteers/2" for ::1 at 2021-03-03 16:07:21 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVolunteer Load (2.5ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:49:in `set_volunteer'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:32:in `show'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 3.1ms | Allocations: 1841)
+
+
+Started GET "/volunteers/2" for ::1 at 2021-03-03 16:07:49 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVolunteer Load (1.0ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:49:in `set_volunteer'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:32:in `show'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 1822)
+
+
+Started GET "/volunteers/2" for ::1 at 2021-03-03 16:07:58 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVolunteer Load (3.6ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:49:in `set_volunteer'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:32:in `show'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 5.2ms | Allocations: 1822)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:08:20 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (1.3ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 1.3ms | Allocations: 1269)
+
+
+Started GET "/volunteers/1" for ::1 at 2021-03-03 16:08:22 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVolunteer Load (0.6ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:49:in `set_volunteer'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:32:in `show'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 1806)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:08:24 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.6ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.6ms | Allocations: 1288)
+
+
+Started GET "/volunteers/2" for ::1 at 2021-03-03 16:08:26 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVolunteer Load (1.9ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:49:in `set_volunteer'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:32:in `show'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 3.2ms | Allocations: 1822)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:08:30 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.5ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 1270)
+
+
+Started GET "/volunteers/2" for ::1 at 2021-03-03 16:08:31 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVolunteer Load (0.5ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:49:in `set_volunteer'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:32:in `show'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 1822)
+
+
+Started GET "/volunteers/2" for ::1 at 2021-03-03 16:10:11 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVolunteer Load (0.4ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:49:in `set_volunteer'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:32:in `show'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.8ms | Allocations: 1822)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:15:35 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (1.3ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.3ms | Allocations: 1269)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:15:42 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (1.6ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 1.6ms | Allocations: 1269)
+
+
+Started GET "/volunteers/2" for ::1 at 2021-03-03 16:15:46 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVolunteer Load (0.4ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:49:in `set_volunteer'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:32:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 1822)
+
+
+Started GET "/volunteers/2" for ::1 at 2021-03-03 16:21:26 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVolunteer Load (0.6ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:29:in `show'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:30:in `show'
+Completed 200 OK in 65ms (Views: 0.4ms | ActiveRecord: 9.1ms | Allocations: 21569)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-03-03 16:21:27 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/volunteers/1" for ::1 at 2021-03-03 16:21:33 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVolunteer Load (0.5ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:29:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:30:in `show'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 1866)
+
+
+Started GET "/volunteers/1" for ::1 at 2021-03-03 16:22:49 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVolunteer Load (0.4ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:29:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:30:in `show'
+Completed 200 OK in 51ms (Views: 0.3ms | ActiveRecord: 8.3ms | Allocations: 18592)
+
+
+Started DELETE "/auth/sign_out" for ::1 at 2021-03-03 16:22:53 +0300
+Processing by DeviseTokenAuth::SessionsController#destroy as HTML
+  Parameters: {"access-token"=>"PGPE8OqENJyLHLc3-nMV-Q", "client"=>"ruz_6-wczEoTrIVbc5e9xg", "uid"=>"lucy@gmail.com"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "lucy@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (5.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", nil], ["updated_at", "2021-03-03 13:22:54.069636"], ["id", 2]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 97ms (Views: 0.2ms | ActiveRecord: 8.6ms | Allocations: 6149)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:22:54 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (1.4ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.4ms | Allocations: 1274)
+
+
+Started POST "/auth" for ::1 at 2021-03-03 16:23:05 +0300
+Processing by DeviseTokenAuth::RegistrationsController#create as HTML
+  Parameters: {"first_name"=>"Raymond", "last_name"=>"Oluoch", "email"=>"rasholuoch@gmail.com", "password"=>"[FILTERED]"}
+[31mUnpermitted parameters: :first_name, :last_name[0m
+[31mUnpermitted parameters: :first_name, :last_name[0m
+[31mUnpermitted parameters: :first_name, :last_name[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."provider" = $2 LIMIT $3[0m  [["email", "rasholuoch@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["uid", "rasholuoch@gmail.com"], ["encrypted_password", "$2a$12$SvTqIkkX7y2vS1B/31up9elFVTA8lX.nbs76UTzfDuPLmOfACqfa6"], ["email", "rasholuoch@gmail.com"], ["created_at", "2021-03-03 13:23:06.175799"], ["updated_at", "2021-03-03 13:23:06.175799"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"6TghcLLH0o9htvCWQH55kA\\\":{\\\"token\\\":\\\"$2a$10$7wjpG5H68fn9bpMlq0.l2u4kpDiUh9JSTNTP0yPctkx4FRqEWgpG6\\\",\\\"expiry\\\":1615987386}}\""], ["updated_at", "2021-03-03 13:23:06.267894"], ["id", 3]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 466ms (Views: 0.3ms | ActiveRecord: 17.5ms | Allocations: 18329)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:23:06 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.6ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.6ms | Allocations: 1263)
+
+
+Started POST "/volunteers" for ::1 at 2021-03-03 16:23:29 +0300
+Processing by VolunteersController#create as HTML
+  Parameters: {"volunteer"=>{"request_type"=>"Need", "description"=>"fdhjf ffewf fef e efre", "location"=>"Nairobi", "longitude"=>"1.2921", "latitude"=>"36.8219", "status"=>"Unfulfilled", "request_due_date"=>"2021-03-23 17:48:18"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "rasholuoch@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:10:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/volunteers_controller.rb:12:in `create'
+  [1m[36mVolunteer Create (1.4ms)[0m  [1m[32mINSERT INTO "volunteers" ("request_type", "description", "location", "latitude", "longitude", "status", "request_due_date", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["request_type", "Need"], ["description", "fdhjf ffewf fef e efre"], ["location", "Nairobi"], ["latitude", "36.8219"], ["longitude", "1.2921"], ["status", "Unfulfilled"], ["request_due_date", "2021-03-23 17:48:18"], ["created_at", "2021-03-03 13:23:29.525962"], ["updated_at", "2021-03-03 13:23:29.525962"], ["user_id", 3]]
+  ↳ app/controllers/volunteers_controller.rb:12:in `create'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/volunteers_controller.rb:12:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 0.8ms | ActiveRecord: 4.3ms | Allocations: 7563)
+
+
+Started GET "/volunteers/3" for ::1 at 2021-03-03 16:23:31 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mVolunteer Load (1.4ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:29:in `show'
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:30:in `show'
+Completed 200 OK in 20ms (Views: 0.3ms | ActiveRecord: 4.0ms | Allocations: 1809)
+
+
+Started GET "/volunteers/3" for ::1 at 2021-03-03 16:23:43 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mVolunteer Load (0.5ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:29:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:30:in `show'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 1827)
+
+
+Started GET "/users" for ::1 at 2021-03-03 16:24:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/volunteers/3" for ::1 at 2021-03-03 16:24:52 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mVolunteer Load (0.5ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:29:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:30:in `show'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 1808)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:24:57 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.5ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 1463)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:25:32 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.5ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 23ms (Views: 15.7ms | ActiveRecord: 4.6ms | Allocations: 7980)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:29:22 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (1.4ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.4ms | Allocations: 1463)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:30:45 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.6ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms | Allocations: 1464)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:32:11 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (5.1ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 2.7ms | ActiveRecord: 5.1ms | Allocations: 1463)
+
+
+Started POST "/auth/sign_in" for ::1 at 2021-03-03 16:32:20 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"rasholuoch@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "rasholuoch@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"6TghcLLH0o9htvCWQH55kA\\\":{\\\"token\\\":\\\"$2a$10$7wjpG5H68fn9bpMlq0.l2u4kpDiUh9JSTNTP0yPctkx4FRqEWgpG6\\\",\\\"expiry\\\":1615987386},\\\"DiM74l6IUD_ONTEauquJQQ\\\":{\\\"token\\\":\\\"$2a$10$lLj81AfS514srINqjDE63eaT.gyPhMac9uNyYtQVpWsoetGiDnU4C\\\",\\\"expiry\\\":1615987940}}\""], ["updated_at", "2021-03-03 13:32:20.763305"], ["id", 3]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 415ms (Views: 0.3ms | ActiveRecord: 9.8ms | Allocations: 17779)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:32:21 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.6ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms | Allocations: 1462)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:36:46 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (0.6ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms | Allocations: 1463)
+
+
+Started GET "/volunteers/3" for ::1 at 2021-03-03 16:36:48 +0300
+Processing by VolunteersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mVolunteer Load (4.2ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" WHERE "volunteers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:29:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/volunteers_controller.rb:30:in `show'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 4.6ms | Allocations: 2141)
+
+
+Started GET "/volunteers" for ::1 at 2021-03-03 16:43:56 +0300
+Processing by VolunteersController#index as HTML
+  [1m[36mVolunteer Load (1.7ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers" ORDER BY request_due_date ASC[0m
+  ↳ app/controllers/volunteers_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 1.7ms | Allocations: 1603)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-03-03 16:43:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
