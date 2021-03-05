@@ -1,26 +1,18 @@
 class MessagesController < ApplicationController
-  before_action :find_conversation
+  # before_action :set_message, only: [:show, :update, :destroy]
 
   def index
-    @messages = @conversation.messages
-
-    # if @messages.length > 10
-    #   @over_ten = true
-    #   @messages = @messages[-10..]
-    # end
-
-    # if params[:m]
-    #   @over_ten = false
-    #   @messages = @conversation.messages
-    # end
-
-    # @message = @conversation.messages.new
+    @messages = Message.order('created_at ASC')
     render json: @messages
   end
 
+  # def show
+  #   render json: @message
+  # end
+
   def create
-    @message = @conversation.messages.new(message_params)
-    # redirect_to conversation_messages_path(@conversation) if @message.save
+    @message = current_user.messages.build(message_params)
+
     if @message.save
       render json: @message
     else
@@ -28,17 +20,27 @@ class MessagesController < ApplicationController
     end
   end
 
-  # def new
-  #   @message = @conversation.messages.new
+  # def update
+  #   @message = current_user.messages.find(params[:id])
+
+  #   if @message.update(message_params)
+  #     render json: @message
+  #   else
+  #     render json: @message.errors, status: :unprocessable_entity
+  #   end
+  # end
+
+  # def destroy
+  #   @message.destroy
   # end
 
   private
 
   def message_params
-    params.require(:message).permit(:body, :user_id)
+    params.require(:message).permit(:body, :user_id, :volunteer_id)
   end
 
-  def find_conversation
-    @conversation = Conversation.find(params[:conversation_id])
-  end
+  # def set_message
+  #   @message = Message.find(params[:id])
+  # end
 end

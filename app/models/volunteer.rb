@@ -4,6 +4,7 @@ class Volunteer < ApplicationRecord
   validate :start_datetime_cannot_be_in_the_past
 
   belongs_to :user
+  has_many :messages
 
   private
 

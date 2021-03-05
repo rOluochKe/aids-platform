@@ -7,7 +7,8 @@ class VolunteersController < ApplicationController
   end
 
   def create
-    @volunteer = current_user.volunteers.build(volunteer_params)
+    # @volunteer = current_user.volunteers.build(volunteer_params)
+    @volunteer = Volunteer.new(volunteer_params)
 
     if @volunteer.save
       render json: @volunteer
